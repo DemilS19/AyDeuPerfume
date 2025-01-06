@@ -1,0 +1,260 @@
+/* Mengganti font */
+@import
+url('https://fonts.googleapis.com/css2?family=Quando&display=swap');
+
+.quando-font{
+    font-family: Quando;
+}
+
+/* Custom CSS for logo size */
+.navbar-brand img {
+    width: 70px;  /* Adjust the width as needed */
+    height: 70px;  /* Maintain aspect ratio */
+}
+
+/* Mengganti warna font menjadi hitam */
+.collapse ul li a{
+    color: black !important;
+}
+
+/* Mengganti warna background dropdown */
+.dropdown-menu{
+    background-color: #eceae5;
+}
+.dropdown-menu a:hover{
+    background-color: #CC8674 !important;
+}
+
+.best-deal h1{
+    font-size: 25px;
+    color: #AA5C48;
+}
+
+hr{
+    width:10%;
+    border: 1px solid #A95B46
+}
+
+.card-text{
+    color: #AA5C48 !important;
+    font-family: Mullish;
+    font-size: 15px !important;
+}
+
+#kaki {
+    background-image: url('assets/Beauty\ Skin.png'); 
+    background-size: cover; 
+    background-position: center;
+    text-align: center;
+    width:100%;
+    height:70px;
+    margin-top:5px;
+    padding: 7px 0;
+    background-color: gold;
+    font-family: 'Georgia', cursive;
+    color: #333;
+}
+
+#carouselExampleAutoplaying .carousel-item img {
+    height: 400px; /* Sesuaikan tinggi yang Anda inginkan */
+    object-fit: cover; /* Memastikan gambar menyesuaikan area */
+}
+
+@import
+url('https:/fonts.googleapis.com/css2?family=Mulish&display=swap');
+.mulish-font {
+    font-family: Mulish
+}
+
+.nav-item .bi-cart4 {
+    font-size: 1.5rem; /* Sesuaikan angka ini untuk mengubah ukuran */
+}
+
+/* Navbar Shadow */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover Effect on Navbar Links */
+.collapse ul li a:hover {
+    color: #AA5C48 !important;
+    font-weight: bold;
+    border-bottom: 2px solid #CC8674;
+    transition: border-bottom 0.2s;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Background Gradient for Footer */
+#kaki {
+    background-image: linear-gradient(45deg, #f6d365, #fda085);
+    color: #333;
+}
+
+/* Button Styling */
+.btn-custom {
+    background-color: #CC8674;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.btn-custom:hover {
+    background-color: #AA5C48;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    background-color: #eceae5;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu a {
+    font-family: 'Mulish', sans-serif;
+    color: #333;
+}
+
+.dropdown-menu a:hover {
+    background-color: #CC8674 !important;
+    color: #fff;
+}
+
+/* Carousel Styling */
+#carouselExampleAutoplaying .carousel-item img {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Custom Fonts */
+body {
+    font-family: 'Mulish', sans-serif;
+    background-color: #fafafa;
+}
+
+/* Product List Sidebar */
+.list-product p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.list-product a {
+    color: #555;
+    padding: 5px 0;
+    transition: color 0.3s;
+}
+
+.list-product a:hover {
+    color: #AA5C48;
+    font-weight: bold;
+}
+
+.custom-control {
+    background-color: rgba(255, 255, 255, 0.7); /* Transparan putih */
+    border-radius: 50%; /* Bentuk bulat */
+    padding: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.custom-control:hover {
+    background-color: rgba(204, 134, 116, 0.8); /* Warna kustom saat hover */
+    transform: scale(1.1); /* Efek membesar saat hover */
+}
+
+.custom-control i {
+    font-size: 2.5rem; /* Ukuran ikon */
+    color: #333; /* Warna ikon */
+}
+
+/* Menghilangkan background oval besar pada kontrol panah */
+.carousel-control-prev, .carousel-control-next {
+    background: none;  /* Menghilangkan latar belakang */
+    border: none;      /* Menghilangkan border */
+    color: #000;       /* Atur warna ikon sesuai kebutuhan */
+    font-size: 2rem;   /* Ukuran ikon */
+}
+
+.carousel-control-prev i, .carousel-control-next i {
+    font-size: 3rem; /* Ukuran ikon lebih besar */
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover {
+    background-color: transparent; /* Tidak ada background saat hover */
+    color: #CC8674; /* Ganti warna ikon saat hover */
+}
+
+body {
+    padding-top: 95px; /* Menyesuaikan agar konten tidak tertutup navbar */
+}
+
+/* Memberikan warna latar belakang krem dengan transparansi pada navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7); /* Krem dengan transparansi */
+}
+
+.intro-section {
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.intro-image {
+    width: 50%;
+    padding-right: 20px;
+}
+
+.intro-text {
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 50%;
+    text-align: justify;
+    border-radius: 10px;
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+.intro-text p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.video-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+iframe {
+    width: 80%;
+    height: 450px;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+}

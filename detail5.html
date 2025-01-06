@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- Include Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+        <div class="container-fluid">
+            <!-- Brand -->
+            <a class="navbar-brand" href="#">
+                <img src="assets/logo.png" alt="">
+            </a>
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                <ul class="navbar-nav quando-font">
+                    <!-- Add your navbar items here -->
+                    <li class="nav-item me-5">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Product
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="product.html">Perfume for Man</a></li>
+                            <li><a class="dropdown-item" href="product1.html">Perfume for Women</a></li>
+                            <li><a class="dropdown-item" href="product2.html">Aromatic Perfume</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" aria-current="page" href="About Us.html">About Us</a>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="checkout.html">
+                            <i class="bi bi-cart4"></i>
+                        </a>
+                    </li>                      
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Toast -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="liveToast" class="toast align-items-center text-white bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="d-flex">
+                <div class="toast-body">
+                    Successfully added to cart.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Section -->
+    <div class="container pt-5">
+        <div class="row align-items-start">
+            <div class="col-md-5">
+                <img src="assets/product1/2.jpg" class="img-fluid" alt="Product Image">
+            </div>
+            <div class="col-md-7">
+                <h2>ETHEREAL</h2>
+                <p>Rp 389.000,00</p>
+                <p>The perfect sillage of perceived purity, it lingers with a gentle, captivating charm, revealing a more enigmatic side as it settles.</p>
+                <button type="button" class="btn btn-dark btn-lg" onclick="showSpinner()">
+                    <span id="spin" class="spinner-border spinner-border-lg d-none" role="status" aria-hidden="true"></span>
+                    <span id="text">Add to Cart</span>
+                </button>
+                <div class="pt-3">
+                    <p>
+                        Ordering H-3 
+                        <i class="fa fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="right" title="Sameday delivery call customer service"></i>
+                    </p>
+                    <p>
+                        Payment Info 
+                        <i class="fa fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="top" title="We accept Visa, Mastercard, and PayPal"></i>
+                    </p>
+                    <p>
+                        Return Policy 
+                        <i class="fa fa-info-circle" data-bs-toggle="tooltip" data-bs-placement="left" title="Free returns within 30 days"></i>
+                    </p>
+                </div>
+
+                <!-- Accordion Section Beside Image -->
+                <div class="accordion accordion-flush pt-3 pb-3" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                                Description
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Top : Pear, Violet, Almond Blossom<br>
+                                Middle : Rose, Iris, Jasmine<br>
+                                Base : Amber, Musk, Tonka Bean, Sandalwood</div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Delivery Information
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Delivery within 1-3 business days for local orders.</div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                                Customer Reviews
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Soft, sophisticated, and fresh all day. It’s now my signature scent—absolutely love it!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Initialize tooltips
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+        // Toast function
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'));
+        var toastList = toastElList.map(function (toastEl) {
+            return new bootstrap.Toast(toastEl);
+        });
+
+        // Spinner function
+        function showSpinner() {
+            var spin = document.getElementById("spin");
+            var text = document.getElementById("text");
+
+            text.style.display = "none";
+            spin.classList.remove("d-none");
+            spin.classList.add("d-block");
+
+            setTimeout(function() {
+                spin.classList.remove("d-block");
+                spin.classList.add("d-none");
+                text.style.display = "block";
+                toastList.forEach(toast => toast.show());
+            }, 1000);
+        }
+    </script>
+    <footer class="pt-4 my-md-5 pt-md-5 border-top" style="background-color: #C8C7C0;">
+        <div class="row">
+          <div class="col-12 col-md">
+            <img class="mb-2" src="assets/logo.png" alt="" width="50" height="45">
+            <small class="d-block mb-3 text-body-secondary">© 2024 AyDeu Perfume. All rights reserved - Terms & Conditions</small>
+          </div>
+          <div class="col-6 col-md">
+            <a href="index.html" style="text-decoration: none; color: grey;">
+                <h5>Home</h5>
+            </a>
+        </div>
+          <div class="col-6 col-md">
+            <h5>Product</h5>
+            <ul class="list-unstyled text-small">
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="product.html">Perfume for Men</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="product1.html">Perfume for Women</a></li>
+              <li class="mb-1"><a class="link-secondary text-decoration-none" href="product2.html">Aromatic Perfume</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md">
+            <a href="About Us.html" style="text-decoration: none; color: grey;">
+                <h5>About Us</h5>
+            </a>
+        </div>
+        </div>
+      </footer>
+</body>
+</html>

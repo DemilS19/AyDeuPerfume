@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <!-- Include Font Awesome for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class='alert alert-info mulish-font' role='alert'>
+        HI, you have free shipping quota of 5 times this week
+    </div>
+    
+    <!-- Form -->
+    <form action="#" method="post" id="form-order">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <label for="name" class="form-label mulish-font">Recipient's name</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-user" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control mulish-font" id="name" name="r_name" required>
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-6">
+                <label for="phone" class="form-label mulish-font">Phone Number</label>
+                <input type="text" class="form-control mulish-font" id="phone" name="phone" required>
+            </div>
+            <div class="col-12">
+                <label for="email" class="form-label mulish-font">Email</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+                    <input type="email" class="form-control mulish-font" id="email" name="email" required>
+                </div>
+            </div>
+            <div class="mb-3 col-12 col-md-8">
+                <label for="city" class="form-label mulish-font">City</label>
+                <input type="text" class="form-control mulish-font" id="city" name="city" required>
+            </div>
+            <div class="mb-3 col-12 col-md-4">
+                <label for="Pos" class="form-label mulish-font">Post Code</label>
+                <input type="text" class="form-control mulish-font" id="Pos" name="pos" required>
+            </div>
+            <div class="mb-3">
+                <label for="Address" class="form-label mulish-font">Address</label>
+                <textarea class="form-control mulish-font" id="Address" rows="2" name="address" required></textarea>
+            </div>
+            <div class="col-12">
+                <!-- Button to trigger the modal -->
+                <button type="button" class="btn btn-primary mulish-font" data-bs-toggle="modal" data-bs-target="#address">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Modal -->
+    <div class="modal fade" id="address" tabindex="-1" aria-labelledby="addressLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title mulish-font" id="exampleModalLabel">Confirm Submit</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Are you sure you want to submit this form?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="submitBtn" class="btn btn-primary mulish-font">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            // Submit the form
+            var form = document.getElementById('form-order');
+            form.submit();
+            
+            // Optionally, hide the modal
+            var modal = bootstrap.Modal.getInstance(document.getElementById('address'));
+            modal.hide();
+        });
+    </script>
+</body>
+</html>
